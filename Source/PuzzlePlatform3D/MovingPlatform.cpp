@@ -40,7 +40,6 @@ void AMovingPlatform::Tick(float DeltaTime)
 			GlobalTargetLocation = TempSwap;
 		}
 		FVector Direction = (GlobalTargetLocation - GlobalStartLocation).GetSafeNormal();
-		UE_LOG(LogTemp, Warning, TEXT("%s"), *Direction.ToString());
 		Location += PlatformMoveSpeed * DeltaTime * Direction;
 		SetActorLocation(Location);
 	}
