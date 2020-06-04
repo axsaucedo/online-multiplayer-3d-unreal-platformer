@@ -31,16 +31,25 @@ private:
 	class UButton* HostButton;
 
 	UPROPERTY(meta = (BindWidget))
-	class UButton* JoinButton;
+	class UButton* OpenJoinMenuButton;
 
 	UPROPERTY(meta = (BindWidget))
 	class UButton* BackButton;
+
+	UPROPERTY(meta = (BindWidget))
+	class UButton* JoinGameButton;
 
 	UPROPERTY(meta = (BindWidget))
 	class UWidgetSwitcher* MenuSwitcher;
 
 	UPROPERTY(meta = (BindWidget))
 	class UWidget* JoinMenu;
+
+	UPROPERTY(meta = (BindWidget))
+	class UWidget* MainMenu;
+
+	UPROPERTY(meta = (BindWidget))
+	class UEditableTextBox* IPAddressTextBox;
 
 	UFUNCTION()
 	void OnClickHostServer();
@@ -50,6 +59,9 @@ private:
 
 	UFUNCTION()
 	void OnClickBackJoinMenu();
+
+	UFUNCTION()
+	void OnClickJoinGameJoinMenu();
 
 	IMenuInterface* MenuInterface;
 };
