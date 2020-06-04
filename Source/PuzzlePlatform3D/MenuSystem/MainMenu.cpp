@@ -32,7 +32,7 @@ void UMainMenu::OnClickJoinGameJoinMenu()
 {
 	if (!ensure(IPAddressTextBox != nullptr)) return;
 	if (!ensure(MenuInterface != nullptr)) return;
-	FString Address = IPAddressTextBox->Text.ToString();
+	FString Address = IPAddressTextBox->GetText().ToString();
 	MenuInterface->Join(Address);
 }
 
