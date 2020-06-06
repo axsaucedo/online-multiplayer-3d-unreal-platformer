@@ -17,6 +17,8 @@ class PUZZLEPLATFORM3D_API UMainMenu : public UUserWidget
 	GENERATED_BODY()
 
 public:
+	UMainMenu(const FObjectInitializer& ObjectInitializer);
+
 	void SetMenuInterface(IMenuInterface* InjectedMenuInterface);
 
 	void Setup();
@@ -49,7 +51,7 @@ private:
 	class UWidget* MainMenu;
 
 	UPROPERTY(meta = (BindWidget))
-	class UEditableTextBox* IPAddressTextBox;
+	class UPanelWidget* ServerList;
 
 	UFUNCTION()
 	void OnClickHostServer();
@@ -64,4 +66,5 @@ private:
 	void OnClickJoinGameJoinMenu();
 
 	IMenuInterface* MenuInterface;
+	TSubclassOf<class UUserWidget> ServerRowClass;
 };
